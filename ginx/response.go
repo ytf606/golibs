@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"git.100tal.com/wangxiao_monkey_tech/lib/errorx"
-	"git.100tal.com/wangxiao_monkey_tech/lib/ginx/validate"
-	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
+	"github.com/ytf606/golibs/errorx"
+	"github.com/ytf606/golibs/ginx/validate"
+	"github.com/ytf606/golibs/logx"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 )

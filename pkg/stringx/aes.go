@@ -4,8 +4,8 @@ import (
 	"crypto/aes"
 	"encoding/base64"
 
-	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
-	"git.100tal.com/wangxiao_monkey_tech/lib/pkg/osx"
+	"github.com/ytf606/golibs/logx"
+	"github.com/ytf606/golibs/pkg/osx"
 )
 
 func AesEncryptECB(origDataStr, keyEcb string) string {

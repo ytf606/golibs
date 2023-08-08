@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
+	"github.com/ytf606/golibs/logx"
 	clientv3 "go.etcd.io/etcd/client/v3"
 	"go.etcd.io/etcd/client/v3/naming/endpoints"
 )

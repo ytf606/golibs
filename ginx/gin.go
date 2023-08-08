@@ -1,7 +1,7 @@
 package ginx
 
 import (
-	"git.100tal.com/wangxiao_monkey_tech/lib/errorx"
+	"github.com/ytf606/golibs/errorx"
 	"github.com/gin-gonic/gin"
 )
 

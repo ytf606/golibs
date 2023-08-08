@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"git.100tal.com/wangxiao_monkey_tech/lib/errorx"
-	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
+	"github.com/ytf606/golibs/errorx"
+	"github.com/ytf606/golibs/logx"
 	"github.com/golang-jwt/jwt/v4"
 )
 

@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
-	"git.100tal.com/wangxiao_monkey_tech/lib/logx/logtrace"
+	"github.com/ytf606/golibs/logx"
+	"github.com/ytf606/golibs/logx/logtrace"
 	"github.com/gin-gonic/gin"
 )
 

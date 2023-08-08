@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"git.100tal.com/wangxiao_monkey_tech/lib/errorx"
-	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
-	"git.100tal.com/wangxiao_monkey_tech/lib/pkg/osx"
-	"git.100tal.com/wangxiao_monkey_tech/lib/pkg/stringx"
-	"git.100tal.com/wangxiao_monkey_tech/lib/request"
+	"github.com/ytf606/golibs/errorx"
+	"github.com/ytf606/golibs/logx"
+	"github.com/ytf606/golibs/pkg/osx"
+	"github.com/ytf606/golibs/pkg/stringx"
+	"github.com/ytf606/golibs/request"
 	"github.com/golang-jwt/jwt/v4"
 )
 
