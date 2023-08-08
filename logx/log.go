@@ -3,8 +3,8 @@ package logx
 import (
 	"context"
 
-	"github.com/ytf606/golibs/logx/builders"
-	"github.com/ytf606/golibs/logx/logutils"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx/builders"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx/logutils"
 )
 
 var builder MessageBuilder = new(builders.DefaultBuilder)

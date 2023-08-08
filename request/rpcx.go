@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ytf606/golibs/errorx"
-	"github.com/ytf606/golibs/logx"
-	"github.com/ytf606/golibs/logx/logtrace"
+	"git.100tal.com/wangxiao_monkey_tech/lib/errorx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx/logtrace"
 	etcdClient "github.com/rpcxio/rpcx-etcd/client"
 	"github.com/smallnest/rpcx/client"
 	"github.com/smallnest/rpcx/protocol"

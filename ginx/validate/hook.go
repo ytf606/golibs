@@ -1,7 +1,7 @@
 package validate
 
 import (
-	"github.com/ytf606/golibs/logx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
 	ut "github.com/go-playground/universal-translator"
 	"github.com/go-playground/validator/v10"
 )

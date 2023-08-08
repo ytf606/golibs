@@ -3,7 +3,7 @@ package logutils
 import (
 	"strings"
 
-	"github.com/ytf606/golibs/logx/log4go"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx/log4go"
 )
 
 var DefaultReplacer *strings.Replacer

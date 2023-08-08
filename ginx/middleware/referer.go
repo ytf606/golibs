@@ -3,7 +3,7 @@ package middleware
 import (
 	"strings"
 
-	"github.com/ytf606/golibs/logx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
 	"github.com/gin-gonic/gin"
 )
 

@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ytf606/golibs/errorx"
-	"github.com/ytf606/golibs/logx"
-	"github.com/ytf606/golibs/pkg/runtimex"
-	"github.com/ytf606/golibs/pkg/stringx"
-	"github.com/ytf606/golibs/request"
+	"git.100tal.com/wangxiao_monkey_tech/lib/errorx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/pkg/osx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/pkg/stringx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/request"
 	"github.com/golang-jwt/jwt/v4"
 )
 
@@ -140,11 +140,11 @@ func (c *Client) VerifyWebToken(ctx context.Context, code, redirectUri string) (
 		return
 	}
 	if err = stringx.Decoder(resp, &result); err != nil {
-		logx.Ex(ctx, runtimex.PF(), "json decode apple verify web token response failed err:%+v, rawData:%+v", err, string(resp))
+		logx.Ex(ctx, osx.PF(), "json decode apple verify web token response failed err:%+v, rawData:%+v", err, string(resp))
 		return
 	}
 	if result.Error != "" {
-		logx.Ex(ctx, runtimex.PF(), "apple verify web token response raw result:%+v", result)
+		logx.Ex(ctx, osx.PF(), "apple verify web token response raw result:%+v", result)
 		err = errorx.New500Response(errorx.AppleTokenInvalidErr, fmt.Sprintf("apple verify web token response raw info:%+v", result))
 	}
 	return
@@ -170,11 +170,11 @@ func (c *Client) VerifyAppToken(ctx context.Context, code string) (result Valida
 		return
 	}
 	if err = stringx.Decoder(resp, &result); err != nil {
-		logx.Ex(ctx, runtimex.PF(), "json decode apple verify app token response failed err:%+v, rawData:%+v", err, string(resp))
+		logx.Ex(ctx, osx.PF(), "json decode apple verify app token response failed err:%+v, rawData:%+v", err, string(resp))
 		return
 	}
 	if result.Error != "" {
-		logx.Ex(ctx, runtimex.PF(), "apple verify app token response raw result:%+v", result)
+		logx.Ex(ctx, osx.PF(), "apple verify app token response raw result:%+v", result)
 		err = errorx.New500Response(errorx.AppleTokenInvalidErr, fmt.Sprintf("apple verify app token response raw info:%+v", result))
 	}
 	return
@@ -199,11 +199,11 @@ func (c *Client) VerifyRefreshToken(ctx context.Context, refreshToken string) (r
 		return
 	}
 	if err = stringx.Decoder(resp, &result); err != nil {
-		logx.Ex(ctx, runtimex.PF(), "json decode apple verify refresh token response failed err:%+v, rawData:%+v", err, string(resp))
+		logx.Ex(ctx, osx.PF(), "json decode apple verify refresh token response failed err:%+v, rawData:%+v", err, string(resp))
 		return
 	}
 	if result.Error != "" {
-		logx.Ex(ctx, runtimex.PF(), "apple verify refresh token response raw result:%+v", result)
+		logx.Ex(ctx, osx.PF(), "apple verify refresh token response raw result:%+v", result)
 		err = errorx.New500Response(errorx.AppleTokenInvalidErr, fmt.Sprintf("apple verify refresh token response raw info:%+v", result))
 	}
 	return
@@ -228,11 +228,11 @@ func (c *Client) RevokeRefreshToken(ctx context.Context, refreshToken string) (r
 		return
 	}
 	if err = stringx.Decoder(resp, &result); err != nil {
-		logx.Ex(ctx, runtimex.PF(), "json decode apple revoke refresh token response failed err:%+v, rawData:%+v", err, string(resp))
+		logx.Ex(ctx, osx.PF(), "json decode apple revoke refresh token response failed err:%+v, rawData:%+v", err, string(resp))
 		return
 	}
 	if result.Error != "" {
-		logx.Ex(ctx, runtimex.PF(), "apple revoke refresh token response raw result:%+v", result)
+		logx.Ex(ctx, osx.PF(), "apple revoke refresh token response raw result:%+v", result)
 		err = errorx.New500Response(errorx.AppleTokenInvalidErr, fmt.Sprintf("apple revoke refresh token response raw info:%+v", result))
 		return
 	}
@@ -258,11 +258,11 @@ func (c *Client) RevokeAccessToken(ctx context.Context, accessToken string) (res
 		return
 	}
 	if err = stringx.Decoder(resp, &result); err != nil {
-		logx.Ex(ctx, runtimex.PF(), "json decode apple revoke access token response failed err:%+v, rawData:%+v", err, string(resp))
+		logx.Ex(ctx, osx.PF(), "json decode apple revoke access token response failed err:%+v, rawData:%+v", err, string(resp))
 		return
 	}
 	if result.Error != "" {
-		logx.Ex(ctx, runtimex.PF(), "apple revoke access token response raw result:%+v", result)
+		logx.Ex(ctx, osx.PF(), "apple revoke access token response raw result:%+v", result)
 		err = errorx.New500Response(errorx.AppleTokenInvalidErr, fmt.Sprintf("apple revoke access token response raw info:%+v", result))
 		return
 	}

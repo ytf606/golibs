@@ -8,8 +8,6 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/ytf606/golibs/errorx"
-	"github.com/ytf606/golibs/ginx"
 	"github.com/gin-gonic/gin"
 )
 
@@ -19,18 +17,6 @@ var (
 	dot       = []byte(".")
 	slash     = []byte("/")
 )
-
-func NoMethodHandler() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		ginx.ErrResponse(c, errorx.ErrMethodNotAllow)
-	}
-}
-
-func NoRouteHandler() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		ginx.ErrResponse(c, errorx.ErrNotFound)
-	}
-}
 
 // SkipLogInfo -
 func SkipLogInfo() gin.HandlerFunc {

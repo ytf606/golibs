@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ytf606/golibs/errorx"
-	"github.com/ytf606/golibs/logx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/errorx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
 	"github.com/Shopify/sarama"
 	cluster "github.com/bsm/sarama-cluster"
 )

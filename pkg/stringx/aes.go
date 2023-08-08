@@ -4,8 +4,8 @@ import (
 	"crypto/aes"
 	"encoding/base64"
 
-	"github.com/ytf606/golibs/logx"
-	"github.com/ytf606/golibs/pkg/runtimex"
+	"git.100tal.com/wangxiao_monkey_tech/lib/logx"
+	"git.100tal.com/wangxiao_monkey_tech/lib/pkg/osx"
 )
 
 func AesEncryptECB(origDataStr, keyEcb string) string {
@@ -13,7 +13,7 @@ func AesEncryptECB(origDataStr, keyEcb string) string {
 	key := []byte(keyEcb)
 	cipher, err := aes.NewCipher(generateKey(key))
 	if err != nil {
-		logx.E(runtimex.PF(), "mobile aes encode failed raw mobile:%s, err:%+v", origDataStr, err)
+		logx.E(osx.PF(), "mobile aes encode failed raw mobile:%s, err:%+v", origDataStr, err)
 		return ""
 	}
 
@@ -38,14 +38,14 @@ func AesDecryptECB(encryptedStr, keyEcb string) string {
 	key := []byte(keyEcb)
 	encryptedDecode, err := base64.StdEncoding.DecodeString(encryptedStr)
 	if err != nil {
-		logx.E(runtimex.PF(), "mobile aes decode failed raw mobile:%s, err:%+v", encryptedStr, err)
+		logx.E(osx.PF(), "mobile aes decode failed raw mobile:%s, err:%+v", encryptedStr, err)
 		return ""
 	}
 
 	encrypted := encryptedDecode
 	cipher, err := aes.NewCipher(generateKey(key))
 	if err != nil {
-		logx.E(runtimex.PF(), "mobile aes decode failed base64 mobile:%s, err:%+v", encryptedStr, err)
+		logx.E(osx.PF(), "mobile aes decode failed base64 mobile:%s, err:%+v", encryptedStr, err)
 		return ""
 	}
 
